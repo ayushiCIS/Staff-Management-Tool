@@ -4,7 +4,7 @@ Utilizing real-world data to advise owners on the appropriate labor allocation f
 
 
 
-
+# Importing 
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
@@ -35,7 +35,7 @@ def predict_labor(day_of_week, weather_score, event_score, prev_sales):
     input_data = np.array([[day_of_week, weather_score, event_score, prev_sales]])
     return model.predict(input_data)[0]
 
-# Example usage (Replace with real-time values)
+# Usage
 day_of_week = 5  # Saturday
 weather_score = 8  # (1-10 scale, 10 being best for business)
 event_score = 2  # (Local events impact: 0 = none, 10 = high)
